@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulário de contato acessível e informações sobre o projeto.">
+  <title>Contato | Acessível no Dia a Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Opções de acessibilidade">
+    <button type="button" id="btn-diminuir" aria-label="Diminuir tamanho da fonte">A−</button>
+    <button type="button" id="btn-aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+    <button type="button" id="btn-padrao">Restaurar padrão</button>
+  </div>
+  <p id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></p>
+
+  <header class="topo">
+    <a class="logo" href="index.html">Acessível no Dia a Dia</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="mobilidade.html">Mobilidade urbana</a></li>
+        <li><a href="digital.html">Acessibilidade digital</a></li>
+        <li><a href="comunicacao.html">Comunicação inclusiva</a></li>
+        <li><a href="trabalho-educacao.html">Trabalho e educação</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <h1>Contato</h1>
+    <p>Encontrou alguma barreira de acessibilidade neste site ou quer sugerir um tema? Envie sua mensagem. Campos marcados com <span aria-hidden="true">*</span><span class="visualmente-oculto">asterisco</span> são obrigatórios.</p>
+
+    <form id="form-contato" novalidate>
+      <div class="campo">
+        <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+        <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="erro-nome">
+        <p id="erro-nome" class="erro"></p>
+      </div>
+      <div class="campo">
+        <label for="email">E-mail <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="dica-email erro-email">
+        <p id="dica-email" class="dica">Exemplo: nome@exemplo.com</p>
+        <p id="erro-email" class="erro"></p>
+      </div>
+      <div class="campo">
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto">
+          <option>Sugestão de tema</option>
+          <option>Relatar barreira de acessibilidade</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
+        <textarea id="mensagem" name="mensagem" rows="6" required aria-describedby="erro-mensagem"></textarea>
+        <p id="erro-mensagem" class="erro"></p>
+      </div>
+      <button type="submit" class="botao">Enviar mensagem</button>
+      <p id="status-form" role="status" aria-live="polite"></p>
+    </form>
+
+    <h2>Referências</h2>
+    <ul>
+      <li>BRASIL. Lei nº 13.146, de 6 de julho de 2015 — Lei Brasileira de Inclusão da Pessoa com Deficiência.</li>
+      <li>BRASIL. Lei nº 10.436, de 24 de abril de 2002 — Dispõe sobre a Língua Brasileira de Sinais.</li>
+      <li>BRASIL. Lei nº 8.213, de 24 de julho de 1991 — Planos de Benefícios da Previdência Social (art. 93).</li>
+      <li>ABNT. NBR 9050: Acessibilidade a edificações, mobiliário, espaços e equipamentos urbanos.</li>
+      <li>W3C. <span lang="en">Web Content Accessibility Guidelines (WCAG) 2.2</span>.</li>
+      <li>IBGE. PNAD Contínua: Pessoas com deficiência, 2022.</li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>Acessível no Dia a Dia — Trabalho Discente Efetivo (TDE) de Programação Web.</p>
+    <p>Site desenvolvido seguindo as diretrizes <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 e o modelo <abbr title="Modelo de Acessibilidade em Governo Eletrônico">eMAG</abbr>.</p>
+  </footer>
+
+  <!-- VLibras: tradutor de português para Libras (Governo Federal) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

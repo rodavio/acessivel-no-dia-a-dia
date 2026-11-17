@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Artigos sobre acessibilidade na vida cotidiana: mobilidade, tecnologia, comunicação, trabalho e educação.">
+  <title>Início | Acessível no Dia a Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Opções de acessibilidade">
+    <button type="button" id="btn-diminuir" aria-label="Diminuir tamanho da fonte">A−</button>
+    <button type="button" id="btn-aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+    <button type="button" id="btn-padrao">Restaurar padrão</button>
+  </div>
+  <p id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></p>
+
+  <header class="topo">
+    <a class="logo" href="index.html">Acessível no Dia a Dia</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="mobilidade.html">Mobilidade urbana</a></li>
+        <li><a href="digital.html">Acessibilidade digital</a></li>
+        <li><a href="comunicacao.html">Comunicação inclusiva</a></li>
+        <li><a href="trabalho-educacao.html">Trabalho e educação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <h1>Acessibilidade na vida cotidiana</h1>
+    <p>Acessibilidade é a condição que permite a qualquer pessoa — com ou sem deficiência — usar espaços, serviços, informações e tecnologias com autonomia e segurança. Ela não é um favor: é um direito garantido no Brasil pela <strong>Lei Brasileira de Inclusão (Lei nº 13.146/2015)</strong>.</p>
+
+    <div class="destaque">
+      <p>Segundo o IBGE (PNAD Contínua 2022), cerca de <strong>18,6 milhões de pessoas</strong> com 2 anos ou mais têm algum tipo de deficiência no Brasil — aproximadamente 8,9% da população.</p>
+    </div>
+
+    <h2>Acessibilidade beneficia todo mundo</h2>
+    <p>Uma rampa ajuda o cadeirante, mas também a pessoa com carrinho de bebê, o idoso e o entregador com uma carga pesada. Legendas ajudam pessoas surdas, mas também quem assiste a um vídeo no ônibus sem fone. Esse fenômeno é chamado de <em>efeito rampa</em> (ou <span lang="en">curb-cut effect</span>).</p>
+
+    <h2>Explore os artigos</h2>
+    <ul class="cartoes">
+      <li>
+        <h3><a href="mobilidade.html">Mobilidade urbana</a></h3>
+        <p>Calçadas, transporte público, piso tátil e o direito de ir e vir.</p>
+      </li>
+      <li>
+        <h3><a href="digital.html">Acessibilidade digital</a></h3>
+        <p>Como sites, aplicativos e leitores de tela tornam a internet para todos.</p>
+      </li>
+      <li>
+        <h3><a href="comunicacao.html">Comunicação inclusiva</a></h3>
+        <p>Libras, audiodescrição, linguagem simples e respeito na fala.</p>
+      </li>
+      <li>
+        <h3><a href="trabalho-educacao.html">Trabalho e educação</a></h3>
+        <p>Inclusão nas escolas, universidades e no mercado de trabalho.</p>
+      </li>
+    </ul>
+
+    <h2>Tipos de barreiras</h2>
+    <p>A Lei Brasileira de Inclusão classifica as barreiras que impedem a participação plena das pessoas:</p>
+    <ul>
+      <li><strong>Urbanísticas:</strong> nas vias e espaços públicos;</li>
+      <li><strong>Arquitetônicas:</strong> em edifícios públicos e privados;</li>
+      <li><strong>Nos transportes:</strong> em veículos e terminais;</li>
+      <li><strong>Nas comunicações e na informação:</strong> que dificultam receber ou expressar mensagens;</li>
+      <li><strong>Atitudinais:</strong> atitudes e comportamentos que prejudicam a participação;</li>
+      <li><strong>Tecnológicas:</strong> que dificultam o acesso às tecnologias.</li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>Acessível no Dia a Dia — Trabalho Discente Efetivo (TDE) de Programação Web.</p>
+    <p>Site desenvolvido seguindo as diretrizes <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 e o modelo <abbr title="Modelo de Acessibilidade em Governo Eletrônico">eMAG</abbr>.</p>
+  </footer>
+
+  <!-- VLibras: tradutor de português para Libras (Governo Federal) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

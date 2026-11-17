@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Artigo sobre inclusão de pessoas com deficiência na educação e no mercado de trabalho.">
+  <title>Trabalho e educação | Acessível no Dia a Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Opções de acessibilidade">
+    <button type="button" id="btn-diminuir" aria-label="Diminuir tamanho da fonte">A−</button>
+    <button type="button" id="btn-aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+    <button type="button" id="btn-padrao">Restaurar padrão</button>
+  </div>
+  <p id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></p>
+
+  <header class="topo">
+    <a class="logo" href="index.html">Acessível no Dia a Dia</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="mobilidade.html">Mobilidade urbana</a></li>
+        <li><a href="digital.html">Acessibilidade digital</a></li>
+        <li><a href="comunicacao.html">Comunicação inclusiva</a></li>
+        <li><a href="trabalho-educacao.html" aria-current="page">Trabalho e educação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <h1>Inclusão no trabalho e na educação</h1>
+    <p>Estudar e trabalhar são caminhos para a autonomia. A inclusão nesses espaços exige mais do que abrir vagas: é preciso adaptar ambientes, materiais e, principalmente, atitudes.</p>
+
+    <h2>Educação inclusiva</h2>
+    <p>A Lei Brasileira de Inclusão garante um sistema educacional inclusivo em todos os níveis. Isso significa que estudantes com deficiência têm direito de estudar em escolas regulares, com os apoios necessários, como:</p>
+    <ul>
+      <li>Atendimento Educacional Especializado (<abbr title="Atendimento Educacional Especializado">AEE</abbr>);</li>
+      <li>Materiais em braille, em fonte ampliada ou em formato digital acessível;</li>
+      <li>Intérpretes de Libras em sala de aula;</li>
+      <li>Profissionais de apoio escolar;</li>
+      <li>Tempo adicional em provas, quando necessário.</li>
+    </ul>
+
+    <h2>Lei de Cotas no trabalho</h2>
+    <p>A Lei nº 8.213/1991 determina que empresas com 100 ou mais empregados reservem parte das vagas para pessoas com deficiência ou reabilitadas:</p>
+    <table>
+      <caption>Percentual mínimo de vagas reservadas por porte da empresa</caption>
+      <thead>
+        <tr><th scope="col">Número de empregados</th><th scope="col">Percentual de vagas</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>De 100 a 200</td><td>2%</td></tr>
+        <tr><td>De 201 a 500</td><td>3%</td></tr>
+        <tr><td>De 501 a 1.000</td><td>4%</td></tr>
+        <tr><td>Acima de 1.000</td><td>5%</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Adaptação razoável</h2>
+    <p>Muitas adaptações no trabalho são simples e baratas: um software leitor de tela, uma mesa com altura ajustável, horários flexíveis ou instruções por escrito. O mais importante é conversar com a pessoa e entender suas necessidades.</p>
+
+    <div class="destaque">
+      <p>Inclusão não termina na contratação. Ela envolve oportunidades iguais de crescimento, capacitação e promoção.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Acessível no Dia a Dia — Trabalho Discente Efetivo (TDE) de Programação Web.</p>
+    <p>Site desenvolvido seguindo as diretrizes <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 e o modelo <abbr title="Modelo de Acessibilidade em Governo Eletrônico">eMAG</abbr>.</p>
+  </footer>
+
+  <!-- VLibras: tradutor de português para Libras (Governo Federal) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

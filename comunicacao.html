@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Artigo sobre comunicação inclusiva: Libras, audiodescrição, linguagem simples e termos adequados.">
+  <title>Comunicação inclusiva | Acessível no Dia a Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Opções de acessibilidade">
+    <button type="button" id="btn-diminuir" aria-label="Diminuir tamanho da fonte">A−</button>
+    <button type="button" id="btn-aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+    <button type="button" id="btn-padrao">Restaurar padrão</button>
+  </div>
+  <p id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></p>
+
+  <header class="topo">
+    <a class="logo" href="index.html">Acessível no Dia a Dia</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="mobilidade.html">Mobilidade urbana</a></li>
+        <li><a href="digital.html">Acessibilidade digital</a></li>
+        <li><a href="comunicacao.html" aria-current="page">Comunicação inclusiva</a></li>
+        <li><a href="trabalho-educacao.html">Trabalho e educação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <h1>Comunicação inclusiva</h1>
+    <p>Comunicar é mais do que falar ou escrever: é garantir que a mensagem chegue a todas as pessoas. A comunicação inclusiva considera diferentes formas de perceber e expressar informações.</p>
+
+    <h2>Libras: uma língua, não uma mímica</h2>
+    <p>A <strong>Língua Brasileira de Sinais (Libras)</strong> foi reconhecida como meio legal de comunicação pela Lei nº 10.436/2002. Ela tem gramática própria e não é uma tradução “palavra por palavra” do português. Muitas pessoas surdas têm a Libras como primeira língua, por isso legendas nem sempre são suficientes — a presença de intérpretes é fundamental.</p>
+
+    <h2>Audiodescrição</h2>
+    <p>A audiodescrição transforma imagens em palavras. Em filmes, peças de teatro, eventos e redes sociais, ela descreve cenários, expressões e ações para pessoas cegas ou com baixa visão. Nas redes sociais, você pode ajudar usando a hashtag <span lang="en">#PraCegoVer</span> seguida de uma descrição da imagem publicada.</p>
+
+    <h2>Linguagem simples</h2>
+    <p>Textos claros beneficiam pessoas com deficiência intelectual, pessoas com dislexia, idosos e quem tem pouca escolaridade. Algumas dicas:</p>
+    <ol>
+      <li>Use frases curtas e na ordem direta;</li>
+      <li>Prefira palavras do dia a dia;</li>
+      <li>Explique siglas na primeira vez em que aparecem;</li>
+      <li>Divida o texto em tópicos com títulos;</li>
+      <li>Coloque a informação mais importante no início.</li>
+    </ol>
+
+    <h2>Termos adequados</h2>
+    <table>
+      <caption>Como se referir às pessoas com respeito</caption>
+      <thead>
+        <tr><th scope="col">Evite</th><th scope="col">Prefira</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Portador de deficiência, deficiente</td><td>Pessoa com deficiência</td></tr>
+        <tr><td>Surdo-mudo</td><td>Pessoa surda</td></tr>
+        <tr><td>Confinado a uma cadeira de rodas</td><td>Usuário de cadeira de rodas</td></tr>
+        <tr><td>Pessoa normal</td><td>Pessoa sem deficiência</td></tr>
+        <tr><td>Retardado, mongoloide</td><td>Pessoa com deficiência intelectual; pessoa com síndrome de Down</td></tr>
+      </tbody>
+    </table>
+    <p>Na dúvida, pergunte à própria pessoa como ela prefere ser chamada.</p>
+
+  </main>
+
+  <footer>
+    <p>Acessível no Dia a Dia — Trabalho Discente Efetivo (TDE) de Programação Web.</p>
+    <p>Site desenvolvido seguindo as diretrizes <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 e o modelo <abbr title="Modelo de Acessibilidade em Governo Eletrônico">eMAG</abbr>.</p>
+  </footer>
+
+  <!-- VLibras: tradutor de português para Libras (Governo Federal) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

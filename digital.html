@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Artigo sobre acessibilidade digital: WCAG, leitores de tela e boas práticas para sites.">
+  <title>Acessibilidade digital | Acessível no Dia a Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Opções de acessibilidade">
+    <button type="button" id="btn-diminuir" aria-label="Diminuir tamanho da fonte">A−</button>
+    <button type="button" id="btn-aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+    <button type="button" id="btn-padrao">Restaurar padrão</button>
+  </div>
+  <p id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></p>
+
+  <header class="topo">
+    <a class="logo" href="index.html">Acessível no Dia a Dia</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="mobilidade.html">Mobilidade urbana</a></li>
+        <li><a href="digital.html" aria-current="page">Acessibilidade digital</a></li>
+        <li><a href="comunicacao.html">Comunicação inclusiva</a></li>
+        <li><a href="trabalho-educacao.html">Trabalho e educação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <h1>Acessibilidade digital</h1>
+    <p>Hoje pagamos contas, estudamos, marcamos consultas e conversamos pela internet. Se um site ou aplicativo não é acessível, ele exclui pessoas de serviços essenciais. Acessibilidade digital é garantir que qualquer pessoa consiga perceber, entender, navegar e interagir com o conteúdo.</p>
+
+    <h2>Como pessoas com deficiência usam a internet</h2>
+    <ul>
+      <li><strong>Leitores de tela</strong> (como NVDA, JAWS e TalkBack) leem em voz alta o conteúdo da tela para pessoas cegas;</li>
+      <li><strong>Ampliadores de tela</strong> ajudam pessoas com baixa visão;</li>
+      <li><strong>Navegação por teclado</strong> é usada por quem não consegue usar o mouse;</li>
+      <li><strong>Legendas e transcrições</strong> atendem pessoas surdas;</li>
+      <li><strong>Controle por voz</strong> auxilia pessoas com deficiência motora.</li>
+    </ul>
+
+    <h2>Os quatro princípios da WCAG</h2>
+    <p>As Diretrizes de Acessibilidade para Conteúdo Web (<abbr title="Web Content Accessibility Guidelines">WCAG</abbr>), do <abbr title="World Wide Web Consortium">W3C</abbr>, organizam-se em quatro princípios, conhecidos pela sigla <strong>POUR</strong>:</p>
+
+    <details>
+      <summary>1. Perceptível</summary>
+      <p>A informação deve ser apresentada de formas que todos possam perceber: textos alternativos em imagens, legendas em vídeos e contraste adequado entre texto e fundo (mínimo de 4,5:1 para texto normal).</p>
+    </details>
+    <details>
+      <summary>2. Operável</summary>
+      <p>Todas as funções devem funcionar pelo teclado, o foco deve ser visível e o usuário deve ter tempo suficiente para ler e interagir.</p>
+    </details>
+    <details>
+      <summary>3. Compreensível</summary>
+      <p>Textos claros, idioma da página declarado, navegação consistente e mensagens de erro que explicam como corrigir o problema.</p>
+    </details>
+    <details>
+      <summary>4. Robusto</summary>
+      <p>O código deve ser válido e semântico para funcionar com diferentes navegadores e tecnologias assistivas.</p>
+    </details>
+
+    <h2>Recursos de acessibilidade deste site</h2>
+    <p>Este próprio site foi construído como exemplo prático:</p>
+    <ul>
+      <li>Link “Pular para o conteúdo principal” (aparece ao pressionar <kbd>Tab</kbd>);</li>
+      <li>Widget <strong>VLibras</strong> (botão azul no canto da tela), que traduz o conteúdo para Libras;</li>
+      <li>Botões para aumentar e diminuir a fonte e para ativar o alto contraste;</li>
+      <li>Estrutura semântica com <code>header</code>, <code>nav</code>, <code>main</code> e <code>footer</code>;</li>
+      <li>Hierarquia correta de títulos (<code>h1</code>, <code>h2</code>, <code>h3</code>);</li>
+      <li>Foco visível em todos os elementos interativos;</li>
+      <li>Imagens com descrição textual e tabelas com cabeçalhos;</li>
+      <li>Layout responsivo que funciona com zoom de até 200%;</li>
+      <li>Respeito à preferência do sistema por movimento reduzido.</li>
+    </ul>
+
+    <div class="destaque">
+      <p><strong>Experimente:</strong> navegue por esta página usando apenas a tecla <kbd>Tab</kbd> para avançar, <kbd>Shift</kbd> + <kbd>Tab</kbd> para voltar e <kbd>Enter</kbd> para ativar links e botões.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Acessível no Dia a Dia — Trabalho Discente Efetivo (TDE) de Programação Web.</p>
+    <p>Site desenvolvido seguindo as diretrizes <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 e o modelo <abbr title="Modelo de Acessibilidade em Governo Eletrônico">eMAG</abbr>.</p>
+  </footer>
+
+  <!-- VLibras: tradutor de português para Libras (Governo Federal) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

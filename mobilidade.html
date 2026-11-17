@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Artigo sobre acessibilidade na mobilidade urbana: calçadas, piso tátil e transporte público.">
+  <title>Mobilidade urbana | Acessível no Dia a Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Opções de acessibilidade">
+    <button type="button" id="btn-diminuir" aria-label="Diminuir tamanho da fonte">A−</button>
+    <button type="button" id="btn-aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+    <button type="button" id="btn-padrao">Restaurar padrão</button>
+  </div>
+  <p id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></p>
+
+  <header class="topo">
+    <a class="logo" href="index.html">Acessível no Dia a Dia</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="mobilidade.html" aria-current="page">Mobilidade urbana</a></li>
+        <li><a href="digital.html">Acessibilidade digital</a></li>
+        <li><a href="comunicacao.html">Comunicação inclusiva</a></li>
+        <li><a href="trabalho-educacao.html">Trabalho e educação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <h1>Mobilidade urbana acessível</h1>
+    <p>Sair de casa para trabalhar, estudar ou passear deveria ser simples. Para muitas pessoas com deficiência ou mobilidade reduzida, porém, o trajeto é uma sequência de obstáculos: calçadas esburacadas, degraus sem rampa, ônibus sem elevador e semáforos sem sinal sonoro.</p>
+
+    <h2>A calçada é o primeiro meio de transporte</h2>
+    <p>Todo deslocamento começa e termina a pé ou sobre rodas na calçada. A norma técnica <strong>ABNT NBR 9050</strong> define que a calçada deve ter uma <em>faixa livre</em> de pelo menos 1,20 metro, sem postes, lixeiras, degraus ou mesas de bar.</p>
+
+    <figure>
+      <svg viewBox="0 0 400 120" role="img" aria-labelledby="fig1-titulo fig1-desc">
+        <title id="fig1-titulo">Divisão da calçada em faixas</title>
+        <desc id="fig1-desc">Desenho da calçada dividida em três faixas: faixa de serviço junto à rua, faixa livre no centro com no mínimo 1,20 metro, e faixa de acesso junto aos imóveis.</desc>
+        <rect x="0" y="0" width="400" height="30" fill="#9aa5b1"/>
+        <text x="200" y="20" text-anchor="middle" font-size="14" fill="#000">Faixa de acesso (imóveis)</text>
+        <rect x="0" y="30" width="400" height="55" fill="#e6eef7" stroke="#0b4f9c"/>
+        <text x="200" y="63" text-anchor="middle" font-size="16" font-weight="bold" fill="#0b4f9c">Faixa livre — mínimo 1,20 m</text>
+        <rect x="0" y="85" width="400" height="35" fill="#9aa5b1"/>
+        <text x="200" y="108" text-anchor="middle" font-size="14" fill="#000">Faixa de serviço (postes, árvores)</text>
+      </svg>
+      <figcaption>Figura 1: As três faixas de uma calçada acessível, segundo a NBR 9050.</figcaption>
+    </figure>
+
+    <h2>Piso tátil: um mapa sob os pés</h2>
+    <p>O piso tátil orienta pessoas cegas ou com baixa visão que usam bengala:</p>
+    <ul>
+      <li><strong>Piso tátil direcional:</strong> possui relevos lineares e indica o caminho a seguir;</li>
+      <li><strong>Piso tátil de alerta:</strong> possui relevos em pontos (bolinhas) e avisa sobre perigo, mudança de direção ou início de escadas e rampas.</li>
+    </ul>
+    <p>Um erro comum é instalar o piso tátil levando a um poste ou a uma parede. Isso coloca em risco quem confia nele.</p>
+
+    <h2>Transporte público</h2>
+    <table>
+      <caption>Recursos de acessibilidade esperados no transporte público</caption>
+      <thead>
+        <tr><th scope="col">Recurso</th><th scope="col">Quem é beneficiado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Plataforma elevatória ou piso baixo</td><td>Usuários de cadeira de rodas, idosos, pessoas com carrinho</td></tr>
+        <tr><td>Anúncio sonoro das paradas</td><td>Pessoas cegas ou com baixa visão, turistas</td></tr>
+        <tr><td>Painel visual das paradas</td><td>Pessoas surdas ou com deficiência auditiva</td></tr>
+        <tr><td>Assentos preferenciais</td><td>Gestantes, idosos, pessoas com deficiência ou com criança de colo</td></tr>
+      </tbody>
+    </table>
+
+    <h2>O que você pode fazer</h2>
+    <ul>
+      <li>Não estacione em vagas reservadas nem sobre a calçada;</li>
+      <li>Mantenha a calçada da sua casa nivelada e livre de obstáculos;</li>
+      <li>Ao ver uma pessoa cega, pergunte se ela precisa de ajuda antes de conduzi-la.</li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>Acessível no Dia a Dia — Trabalho Discente Efetivo (TDE) de Programação Web.</p>
+    <p>Site desenvolvido seguindo as diretrizes <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 e o modelo <abbr title="Modelo de Acessibilidade em Governo Eletrônico">eMAG</abbr>.</p>
+  </footer>
+
+  <!-- VLibras: tradutor de português para Libras (Governo Federal) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>
